@@ -1,0 +1,24 @@
+{
+  "qa_pairs": [
+    {
+      "question": "What are the business hours?",
+      "answer": "Our business hours are Monday through Friday from 9:00 AM to 6:00 PM Eastern Time. We are closed on weekends and major holidays."
+    },
+    {
+      "question": "How do I reset my password?",
+      "answer": "To reset your password, visit the login page and click on the 'Forgot Password' link. Enter your email address, and we'll send you instructions to create a new password."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. For enterprise customers, we also offer invoice-based payments with net-30 terms."
+    },
+    {
+      "question": "How can I contact customer support?",
+      "answer": "You can reach our customer support team through multiple channels: Email us at support@example.com, call us at 1-800-123-4567, or use the live chat feature on our website during business hours."
+    },
+    {
+      "question": "What is your refund policy?",
+      "answer": "We offer a 30-day money-back guarantee on all our products. If you're not satisfied with your purchase, contact our support team within 30 days of purchase for a full refund. Refunds typically process within 5-7 business days."
+    }
+  ]
+}
