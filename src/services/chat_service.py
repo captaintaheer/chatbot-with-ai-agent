@@ -46,9 +46,16 @@ class ChatService:
         )
         
         # Load QA pairs from JSON file
-        qa_pairs_path = "/Users/tahirolaosebikan/python-tahir/AGENTS/chatbot-poc/knowledge_base/qa_pairs.json"
-        with open(qa_pairs_path) as f:
-            service.qa_pairs = json.load(f)["qa_pairs"]
+        try:
+            qa_pairs_obj = await service.memory.s3_client.get_object(
+                Bucket=S3_BUCKET_NAME,
+                Key="knowledge_base/qa_pairs.json"
+            )
+            qa_pairs_data = await qa_pairs_obj['Body'].read()
+            service.qa_pairs = json.loads(qa_pairs_data.decode('utf-8'))["qa_pairs"]
+        except Exception as e:
+            logger.error(f"Failed to load QA pairs from S3: {str(e)}")
+            raise
         
         service.prompt_template = ChatPromptTemplate.from_messages([
             ("system", """You are a helpful assistant that answers questions based strictly on our knowledge base. 
